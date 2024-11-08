@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
+const cors = require('cors')
 const port = process.env.PORT || 3000;
+
 app.use(cors());
 
 const products = [
@@ -10,6 +11,7 @@ const products = [
     "name": "Hydrating Facial Cleanser",
     "description": "A gentle, hydrating cleanser that removes makeup and impurities while preserving natural moisture.",
     "price": 14.99,
+    "image": "https://discoverpilgrim.com/cdn/shop/products/25-aha-2-bha-5-pha-peeling-solution-169309.jpg",
     "offers": {
       "discount": "15% off first purchase",
       "bundle": "Buy 2, get 1 free"
@@ -24,6 +26,7 @@ const products = [
     "name": "Vitamin C Serum",
     "description": "Brightening serum packed with antioxidants to reduce dark spots and improve skin tone.",
     "price": 29.99,
+    "image": "https://discoverpilgrim.com/cdn/shop/files/First-image_1080x1080_0daede38-c63c-4bee-830b-f12e52fd4a6c.jpg",
     "offers": {
       "discount": "20% off",
       "bundle": "Buy 1, get a mini moisturizer for free"
@@ -38,6 +41,7 @@ const products = [
     "name": "Retinol Night Cream",
     "description": "An anti-aging night cream with retinol to reduce fine lines and improve skin elasticity.",
     "price": 35.99,
+    "image": "https://m.media-amazon.com/images/I/41W8p5vQwcL._SX679_.jpg",
     "offers": {
       "discount": "15% for returning customers",
       "bundle": "Buy with Vitamin C Serum for extra 10% off"
@@ -52,6 +56,7 @@ const products = [
     "name": "Organic Rosewater Toner",
     "description": "A refreshing toner that balances and soothes the skin, made with organic rosewater.",
     "price": 12.99,
+    "image": "https://discoverpilgrim.com/cdn/shop/files/First-image_1080x1080_0daede38-c63c-4bee-830b-f12e52fd4a6c.jpg",
     "offers": {
       "discount": "10% off",
       "bundle": "Buy 3, get 10% off"
@@ -66,6 +71,7 @@ const products = [
     "name": "SPF 50 Sunscreen",
     "description": "Lightweight, non-greasy sunscreen that provides broad-spectrum protection from UV rays.",
     "price": 18.99,
+    "image": "https://m.media-amazon.com/images/I/61yOLXC0wuL._SX522_.jpg",
     "offers": {
       "discount": "20% off on first order",
       "seasonal_offer": "25% off for summer"
@@ -80,6 +86,7 @@ const products = [
     "name": "Moisturizing Lip Balm",
     "description": "Nourishing lip balm that hydrates and softens lips, available in a variety of flavors.",
     "price": 5.99,
+    "image": "https://discoverpilgrim.com/cdn/shop/files/First-image_1080x1080_0daede38-c63c-4bee-830b-f12e52fd4a6c.jpg",
     "offers": {
       "discount": "10% off on bundles",
       "bundle": "Buy 2, get the 3rd half-off"
@@ -94,6 +101,7 @@ const products = [
     "name": "Volumizing Mascara",
     "description": "Long-lasting mascara that adds volume and length to lashes without clumping.",
     "price": 9.99,
+    "image": "https://m.media-amazon.com/images/I/51Qu4L3fIYL._SL1500_.jpg",
     "offers": {
       "discount": "10% off for new customers",
       "bundle": "Buy 1, get eyeliner for 50% off"
@@ -108,6 +116,7 @@ const products = [
     "name": "Aloe Vera Gel",
     "description": "Natural aloe vera gel that soothes, hydrates, and repairs skin.",
     "price": 8.99,
+    "image": "https://discoverpilgrim.com/cdn/shop/files/First-image_1080x1080_0daede38-c63c-4bee-830b-f12e52fd4a6c.jpg",
     "offers": {
       "discount": "5% off",
       "bundle": "Buy 2, get a mini face mask free"
@@ -122,6 +131,7 @@ const products = [
     "name": "Charcoal Detox Face Mask",
     "description": "Deep-cleansing mask with activated charcoal to draw out impurities and excess oil.",
     "price": 13.99,
+    "image": "https://discoverpilgrim.com/cdn/shop/files/First-image_1080x1080_0daede38-c63c-4bee-830b-f12e52fd4a6c.jpg",
     "offers": {
       "discount": "10% off",
       "bundle": "Buy with face scrub for extra 5% off"
@@ -136,6 +146,7 @@ const products = [
     "name": "Argan Oil Hair Serum",
     "description": "A lightweight serum that smooths frizz and adds shine, made with pure argan oil.",
     "price": 16.99,
+    "image": "https://discoverpilgrim.com/cdn/shop/files/First-image_1080x1080_0daede38-c63c-4bee-830b-f12e52fd4a6c.jpg",
     "offers": {
       "discount": "15% off first purchase",
       "bundle": "Buy 2, get a mini conditioner free"
@@ -146,6 +157,7 @@ const products = [
     ]
   }
 ]
+
 
 
 app.get('/products', (req, res) => {
